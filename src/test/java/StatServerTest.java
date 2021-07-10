@@ -21,20 +21,6 @@ public class StatServerTest {
     }
 
     @Test
-    public void shouldReturnMonthWithMax() {
-        long actual = service.monthWithMax(purchases);
-        long expected = 8;
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldReturnMonthWithMin() {
-        long actual = service.monthWithMin(purchases);
-        long expected = 8;
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     public void shouldReturnMoreThenAvg() {
         long actual = service.monthCountMoreThenAvg(purchases);
         long expected = 5;
@@ -45,6 +31,18 @@ public class StatServerTest {
     public void shouldReturnLessThenAvg() {
         long actual = service.monthCountLessThenAvg(purchases);
         long expected = 5;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void minSales() {
+        long actual = service.monthCountLessThenAvg(purchases);
+        long expected = 9;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void maxSales() {
+        long actual = service.monthWithMax(purchases);
+        long expected = 8;
         Assertions.assertEquals(expected, actual);
     }
 }
