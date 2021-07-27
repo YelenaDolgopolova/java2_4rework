@@ -35,13 +35,13 @@ public class StatServerTest {
     }
     @Test
     public void minSales() {
-        long actual = service.monthCountLessThenAvg(purchases);
+        long actual = service.minSales(purchases);
         long expected = 9;
         Assertions.assertEquals(expected, actual);
     }
     @Test
     public void maxSales() {
-        long actual = service.monthWithMax(purchases);
+        long actual = service.maxSales(purchases);
         long expected = 8;
         Assertions.assertEquals(expected, actual);
     }
